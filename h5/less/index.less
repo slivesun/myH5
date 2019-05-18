@@ -1,0 +1,650 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.app {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/appBG.gif);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+    .ico {
+        width: 0.7rem;
+        height: 0.7rem;
+        border: 0.06rem solid #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        right: 0.5rem;
+        top: 0.5rem;
+        z-index: 100;
+
+        &.icoSwitch {
+            animation: rotate 1s Infinite linear both;
+
+        }
+
+
+        img {
+            width: 70%;
+            height: 70%;
+        }
+    }
+
+    .pageI {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .pageIN {
+
+            display: flex;
+            flex-flow: column;
+            // justify-content: center;
+            align-items: center;
+
+            .vitae {
+                width: 60%;
+                margin-bottom: 0.2rem;
+                display: flex;
+                align-items: center;
+                animation: slideInRight 1s linear;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .vitaeEng {
+                width: 60%;
+                height: 1rem;
+                display: flex;
+                align-items: center;
+                margin-bottom: 0.2rem;
+                animation: slideInRight 1.5s linear;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .introduce {
+                width: 60%;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 0.5rem;
+
+                div {
+                    flex: 1;
+                    border-left: 0.01rem solid #ccc;
+                    color: #fff;
+                    font-size: 0.29rem;
+                    padding: 0.08rem;
+                    margin-bottom: 0.7rem;
+
+                    &:nth-child(1) {
+                        animation: rubberBand 1s;
+
+                        p {
+                            animation: zoomIn 2s;
+
+                            &:nth-child(2) {
+                                font-size: 0.27rem;
+                            }
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-right: 0.01rem solid #ccc;
+                        animation: rubberBand 1s;
+
+                        p {
+                            animation: zoomIn 2s;
+                            font-size: 0.38rem;
+                        }
+                    }
+                }
+            }
+
+            .HeadPortrait {
+
+                width: 3.5rem;
+                height: 3.5rem;
+                padding: 0.15rem;
+                border: 0.05rem dashed rgb(233, 160, 25);
+                border-style: double dashed dashed double;
+                // transform: rotate(45deg);
+                // animation:bounceIn 1s, heartBeat 2s 3s;
+                animation: bounceIn 1s forwards;
+
+                img {
+                    animation: rotateIn 3s 1s forwards;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    .pageII {
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        font-size: 0.24rem;
+        position: relative;
+
+        .yelowBox {
+            width: 1.5rem;
+            height: 1.5rem;
+            background: rgb(253, 199, 19);
+            position: absolute;
+            top: 0.5rem;
+            left: -0.5rem;
+            opacity: 0.99;
+            animation: rollIn 1s;
+        }
+
+        .yelowBoreder {
+            width: 0.68rem;
+            height: 0.68rem;
+            border: 0.04rem solid rgb(253, 199, 19);
+            position: absolute;
+            top: 1.55rem;
+            left: 0.6rem;
+            animation: rollIn 1s, rotate 1s 1s Infinite cubic-bezier(0.45, 0.84, 0.69, 0.85);
+
+        }
+
+        .VerticalLine {
+            width: 0.05rem;
+            height: 3rem;
+            background-color: rgb(253, 199, 19);
+            position: absolute;
+            top: 3.6rem;
+            left: 1rem;
+            animation: slideInUp 1s linear;
+            opacity: 1;
+
+        }
+
+        .information {
+            position: absolute;
+            top: 2.4rem;
+            left: 1rem;
+            animation: slideInLeft 1s cubic-bezier(0.13, 0.15, 0.68, 0.28);
+
+            span {
+                &:nth-child(1) {
+                    display: block;
+                    font-size: 0.49rem;
+                    font-weight: bold;
+                }
+
+                &:nth-child(2) {
+                    font-size: 0.3rem;
+
+                }
+            }
+        }
+
+        .BasicIntor {
+            position: absolute;
+            top: 3.75rem;
+            left: 1.4rem;
+            animation: slideInRight 1s linear;
+
+            li {
+                font-size: 0.31rem;
+                margin-bottom: 0.05rem;
+                font-weight: 550;
+
+                span {
+                    margin-right: 0.15rem;
+                }
+            }
+        }
+
+        .portrait {
+            width: 1.8rem;
+            height: 2.4rem;
+            position: absolute;
+            top: 2.6rem;
+            left: 5.3rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .Self_introduction {
+            width: 6.4rem;
+            height: 4.9rem;
+            padding: 0.35rem;
+            background-color: rgb(253, 199, 19);
+            position: absolute;
+            bottom: 0.6rem;
+            right: 0rem;
+            color: black;
+            opacity: 0;
+            animation: leftExtension 1s 1s linear, leftShift 1s 1.3s linear forwards, opacity 0.5s 1.3s linear forwards;
+
+            h2 {
+                font-size: 0.45rem;
+                text-align: right;
+                padding-bottom: 0.4rem;
+            }
+
+            p {
+                font-size: 0.3rem;
+                text-indent: 0.6rem;
+                line-height: 0.6rem;
+                opacity: 0;
+                animation: zoomIn 1s 1.8s linear forwards;
+            }
+
+        }
+
+        .lineBoder {
+            position: absolute;
+            bottom: 0.55rem;
+            right: 0.2rem;
+            width: 1.79rem;
+            height: 4.32rem;
+            border: 0.05rem solid rgb(253, 199, 19);
+            animation: fadeInLeft 1s linear;
+        }
+    }
+
+    .pageIII {
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        font-size: 0.24rem;
+        position: relative;
+
+        .yelowBox {
+            width: 1.5rem;
+            height: 1.5rem;
+            background: rgb(253, 199, 19);
+            position: absolute;
+            top: 0.5rem;
+            left: -0.5rem;
+            opacity: 0.99;
+            animation: rollIn 1s;
+        }
+
+        .yelowBoreder {
+            width: 0.68rem;
+            height: 0.68rem;
+            border: 0.04rem solid rgb(253, 199, 19);
+            position: absolute;
+            top: 1.55rem;
+            left: 0.6rem;
+            animation: rollIn 1s, rotate 1s 1s Infinite cubic-bezier(0.45, 0.84, 0.69, 0.85);
+
+        }
+
+        .information {
+            position: absolute;
+            top: 2.4rem;
+            right: 0.5rem;
+            animation: slideInLeft 1s cubic-bezier(0.13, 0.15, 0.68, 0.28);
+
+            span {
+                &:nth-child(1) {
+                    display: block;
+                    font-size: 0.75rem;
+                    font-weight: bold;
+                }
+
+                &:nth-child(2) {
+                    font-size: 0.3rem;
+
+                }
+            }
+        }
+
+
+
+        .course {
+            width: 80%;
+            margin: 60% 10%;
+
+            .timeBorder {
+                width: 1rem;
+                height: 40%;
+                border: 0.03rem solid rgb(248, 172, 31);
+                position: absolute;
+                top: 4.5rem;
+                left: 0.5rem;
+                opacity: 0;
+                animation: fadeInUp 1s 1s linear forwards;
+
+            }
+
+            li {
+                width: 100%;
+                border-bottom: 0.02rem dashed rgb(248, 172, 31);
+                padding: 0.4rem 0 0.1rem 0;
+                font-size: 0.3rem;
+                opacity: 0;
+
+                &:nth-child(1) {
+                    animation: fadeInRight 1s 1s forwards;
+                }
+
+                &:nth-child(2) {
+                    animation: fadeInRight 1s 1.1s forwards;
+                }
+
+                &:nth-child(3) {
+                    animation: fadeInRight 1s 1.2s forwards;
+                }
+
+                &:nth-child(4) {
+                    animation: fadeInRight 1s 1.3s forwards;
+                }
+
+                &:nth-child(5) {
+                    animation: fadeInRight 1s 1.4s forwards;
+                }
+
+                &:nth-child(6) {
+                    animation: fadeInRight 1s 1.5s forwards;
+                }
+
+                span {
+                    opacity: 0;
+                    animation: jackInTheBox 1s 1.7s linear forwards;
+
+                    span {
+                        margin-right: 0.2rem;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    .pageIV {
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        font-size: 0.24rem;
+        position: relative;
+
+        .yelowBox {
+            width: 1.5rem;
+            height: 1.5rem;
+            background: rgb(253, 199, 19);
+            position: absolute;
+            top: 0.5rem;
+            left: -0.5rem;
+            opacity: 0.99;
+            animation: rollIn 1s;
+        }
+
+        .yelowBoreder {
+            width: 0.68rem;
+            height: 0.68rem;
+            border: 0.04rem solid rgb(253, 199, 19);
+            position: absolute;
+            top: 1.55rem;
+            left: 0.6rem;
+            animation: rollIn 1s, rotate 1s 1s Infinite cubic-bezier(0.45, 0.84, 0.69, 0.85);
+
+        }
+
+        .information {
+            position: absolute;
+            top: 2.4rem;
+            right: 0.5rem;
+            text-align: center;
+            animation: slideInLeft 1s linear;
+
+            span {
+                &:nth-child(1) {
+                    display: block;
+                    font-size: 0.75rem;
+                    font-weight: bold;
+                }
+
+                &:nth-child(2) {
+                    font-size: 0.3rem;
+
+                }
+            }
+        }
+
+        .list {
+            width: 75%;
+            margin: 4.5rem auto 0;
+
+            li {
+                display: flex;
+                color: black;
+                margin-bottom: 0.3rem;
+                justify-content: center;
+                align-items: center;
+
+                div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &:nth-child(1) {
+                        width: 1rem;
+                        height: 1rem;
+                        background-color: rgb(245, 208, 1);
+                        border-radius: 0.5rem;
+                        margin-right: 0.3rem;
+                        font-size: 0.45rem;
+                        font-weight: bold;
+                        animation: heartBeat 1s, opacity 0.5s forwards;
+                        opacity: 0;
+
+                    }
+
+                    &:nth-child(2) {
+                        height: 0.8rem;
+                        background: #fff;
+                        border-radius: 0;
+                        flex: 1;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        opacity: 0;
+
+                        .wrpd {
+                            width: 95%;
+                            height: 100%;
+                            padding-right: 0.1rem;
+                            display: block;
+                            background: rgb(245, 208, 1);
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+                            font-size: 0.35rem;
+                            font-weight: bold;
+                            opacity: 0;
+                        }
+                    }
+                }
+
+                &.t {
+                    div {
+                        &.g {
+                            animation: heartBeat 0.8s 1s, opacity 0.5s 1s forwards;
+
+                            span {
+                                animation: heartBeat 1s 1s;
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            animation: fadeInLeft 1s 0.8s forwards;
+                        }
+
+                        .wrpd {
+                            width: 95%;
+                            animation: opacity2 1s 1.5s forwards;
+                        }
+                    }
+                }
+
+                &.r {
+                    div {
+                        &.f {
+                            animation: heartBeat 0.8s 1.3s, opacity 0.5s 1s forwards;
+
+                            span {
+                                animation: heartBeat 1s 1.3s;
+                            }
+
+                        }
+
+                        &:nth-child(2) {
+                            animation: fadeInLeft 1s 0.8s forwards;
+                        }
+
+                        .wrpd {
+                            width: 90%;
+                            animation: opacity2 1s 1.5s forwards;
+                        }
+                    }
+                }
+
+                &.e {
+                    div {
+                        &.d {
+                            animation: heartBeat 0.8s 1.6s, opacity 0.5s 1s forwards;
+
+                            span {
+                                animation: heartBeat 1s 1.6s;
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            animation: fadeInLeft 1s 0.8s forwards;
+                        }
+
+                        .wrpd {
+                            width: 88%;
+                            animation: opacity2 1s 1.5s forwards;
+                        }
+                    }
+
+                }
+
+                &.w {
+                    div {
+                        &.s {
+                            animation: heartBeat 0.8s 1.9s, opacity 0.5s 1s forwards;
+
+                            span {
+                                animation: heartBeat 1s 0.9s;
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            animation: fadeInLeft 1s 0.8s forwards;
+                        }
+
+                        .wrpd {
+                            width: 85%;
+                            animation: opacity2 1s 1.5s forwards;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .p {
+            width: 100%;
+            animation: zoomIn 2s 2s forwards;
+            opacity: 0;
+
+            p {
+                padding: 0 0.5rem;
+                font-size: 0.3rem;
+                text-indent: 0.6rem;
+                line-height: 0.45rem;
+            }
+
+        }
+    }
+
+    .pageV {
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        font-size: 0.24rem;
+        position: relative;
+
+        .yelowBox {
+            width: 1.5rem;
+            height: 1.5rem;
+            background: rgb(253, 199, 19);
+            position: absolute;
+            top: 0.5rem;
+            left: -0.5rem;
+            opacity: 0.99;
+            animation: rollIn 1s;
+        }
+
+        .yelowBoreder {
+            width: 0.68rem;
+            height: 0.68rem;
+            border: 0.04rem solid rgb(253, 199, 19);
+            position: absolute;
+            top: 1.55rem;
+            left: 0.6rem;
+            animation: rollIn 1s, rotate 1s 1s Infinite cubic-bezier(0.45, 0.84, 0.69, 0.85);
+
+        }
+
+        .information {
+            position: absolute;
+            top: 2.4rem;
+            right: 0.5rem;
+            text-align: center;
+            animation: slideInLeft 1s linear;
+
+            span {
+                &:nth-child(1) {
+                    display: block;
+                    font-size: 0.75rem;
+                    font-weight: bold;
+                }
+
+                &:nth-child(2) {
+                    font-size: 0.3rem;
+
+                }
+            }
+        }
+    }
+}
